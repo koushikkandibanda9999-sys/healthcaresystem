@@ -1,0 +1,64 @@
+{
+  "_note": "Synthetic patient data generated for demo purposes. NOT real clinical data.",
+  "_source": "Synthea-compatible synthetic dataset. See https://synthea.mitre.org/",
+  "patients": [
+    {
+      "syntheaId": "synthea-001",
+      "name": "Emma Wilson",
+      "dateOfBirth": "1985-06-15",
+      "gender": "female",
+      "bloodType": "A+",
+      "email": "emma.wilson@patient.example"
+    }
+  ],
+  "encounters": [
+    {
+      "syntheaEncounterId": "enc-001",
+      "patientSyntheaId": "synthea-001",
+      "encounterDate": "2024-01-15",
+      "type": "ENCOUNTER",
+      "category": "ENCOUNTER",
+      "content": {
+        "chiefComplaint": "Shortness of breath and mild cough",
+        "diagnosis": "J45.20 - Mild intermittent asthma, uncomplicated",
+        "medications": "Albuterol 90 mcg inhaler PRN, Fluticasone 44 mcg inhaler daily",
+        "allergies": "Penicillin - rash; Aspirin - GI upset",
+        "observations": "BP 118/76 mmHg, HR 82 bpm, O2 Sat 97%, Peak Flow 420 L/min",
+        "procedures": "Spirometry performed, Peak flow measurement",
+        "notes": "Asthma well-controlled on current regimen. Follow-up in 3 months."
+      }
+    },
+    {
+      "syntheaEncounterId": "enc-002",
+      "patientSyntheaId": "synthea-001",
+      "encounterDate": "2024-03-20",
+      "type": "LAB",
+      "category": "LAB",
+      "content": {
+        "chiefComplaint": "Routine annual bloodwork",
+        "diagnosis": "Z00.00 - Encounter for general adult medical examination",
+        "medications": "",
+        "allergies": "Penicillin - rash",
+        "observations": "HbA1c: 5.2%, LDL: 98 mg/dL, HDL: 62 mg/dL, TSH: 2.1 mIU/L, CBC: Normal",
+        "procedures": "Venipuncture, Urinalysis, Lipid panel",
+        "notes": "All values within normal range. Continue current lifestyle."
+      }
+    },
+    {
+      "syntheaEncounterId": "enc-003",
+      "patientSyntheaId": "synthea-001",
+      "encounterDate": "2024-05-10",
+      "type": "PRESCRIPTION",
+      "category": "PRESCRIPTION",
+      "content": {
+        "chiefComplaint": "Seasonal allergic rhinitis flare",
+        "diagnosis": "J30.1 - Allergic rhinitis due to pollen",
+        "medications": "Cetirizine 10 mg daily, Fluticasone nasal spray 2 sprays each nostril daily",
+        "allergies": "Penicillin - rash; Aspirin - GI upset",
+        "observations": "Nasal mucosa erythematous, clear discharge, eyes mildly injected",
+        "procedures": "None",
+        "notes": "Prescribed antihistamine and nasal steroid for allergy season."
+      }
+    }
+  ]
+}

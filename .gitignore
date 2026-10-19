@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment secrets — NEVER commit
+.env
+backend/.env
+frontend/.env
+
+# Build output
+dist/
+build/
+frontend/dist/
+
+# Hardhat artifacts / cache
+cache/
+artifacts/
+typechain/
+typechain-types/
+
+# Deployment info (contains addresses, regenerate per deploy)
+artifacts/deployments/
+
+# Off-chain encrypted record storage
+storage/
+backend/storage/
+
+# Performance results (raw data — regenerate)
+performance/results/*.csv
+performance/results/*.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Test coverage
+coverage/
+
+# MongoDB memory server binary cache
+.cache-mongodb-binaries/
+**/mongodb-binaries/

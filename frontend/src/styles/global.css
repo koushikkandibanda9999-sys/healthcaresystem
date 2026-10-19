@@ -1,0 +1,241 @@
+/* Healthcare Blockchain — Global Styles */
+
+:root {
+  --primary:     #0d6efd;
+  --primary-dark: #0a58ca;
+  --success:     #198754;
+  --danger:      #dc3545;
+  --warning:     #ffc107;
+  --info:        #0dcaf0;
+  --sidebar-bg:  #1a2035;
+  --sidebar-text: #a0aec0;
+  --sidebar-active: #0d6efd;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --transition:  all 0.2s ease;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background-color: #f4f6fc;
+  color: #1a2035;
+  margin: 0;
+}
+
+/* ── Layout ── */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  z-index: 100;
+  overflow-y: auto;
+  transition: var(--transition);
+}
+
+.sidebar-brand {
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.sidebar-brand h6 {
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  font-size: 0.95rem;
+}
+.sidebar-brand small {
+  color: var(--sidebar-text);
+  font-size: 0.72rem;
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+  flex: 1;
+}
+.sidebar-nav .nav-item a,
+.sidebar-nav .nav-item button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  color: var(--sidebar-text);
+  text-decoration: none;
+  font-size: 0.875rem;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 0;
+  transition: var(--transition);
+}
+.sidebar-nav .nav-item a:hover,
+.sidebar-nav .nav-item button:hover,
+.sidebar-nav .nav-item a.active {
+  color: #fff;
+  background: rgba(13, 110, 253, 0.2);
+}
+.sidebar-nav .nav-item a.active {
+  border-left: 3px solid var(--primary);
+}
+.sidebar-nav .nav-section-title {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(160,174,192,0.5);
+  padding: 1rem 1.25rem 0.35rem;
+  font-weight: 600;
+}
+
+.main-content {
+  margin-left: 260px;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.page-container {
+  padding: 1.5rem;
+}
+
+/* ── Cards ── */
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+}
+.stat-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+.stat-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* ── Tables ── */
+.table-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+.table-card .table-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.table-card .table { margin-bottom: 0; }
+.table thead th {
+  background: #f8fafc;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.65rem 1rem;
+}
+.table td { padding: 0.75rem 1rem; vertical-align: middle; font-size: 0.875rem; }
+
+/* ── Badges ── */
+.badge-status {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+.badge-pending  { background: #fff3cd; color: #856404; }
+.badge-granted  { background: #d1e7dd; color: #0f5132; }
+.badge-denied   { background: #f8d7da; color: #842029; }
+.badge-revoked  { background: #e2e3e5; color: #41464b; }
+.badge-active   { background: #d1e7dd; color: #0f5132; }
+
+/* ── Forms ── */
+.form-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+/* ── Alerts ── */
+.alert-verified   { background: #d1e7dd; border: 1px solid #a3cfbb; color: #0f5132; }
+.alert-unverified { background: #f8d7da; border: 1px solid #f1aeb5; color: #58151c; }
+
+/* ── Loading ── */
+.spinner-overlay {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 200px;
+}
+
+/* ── Empty state ── */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #9ca3af;
+}
+.empty-state i { font-size: 3rem; margin-bottom: 1rem; display: block; }
+
+/* ── Hash display ── */
+.hash-text {
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  word-break: break-all;
+  color: #4b5563;
+  background: #f9fafb;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .sidebar { width: 100%; height: auto; position: relative; }
+  .main-content { margin-left: 0; }
+  .app-layout { flex-direction: column; }
+}
+
+/* ── Landing page ── */
+.landing-hero {
+  background: linear-gradient(135deg, #1a2035 0%, #0d6efd 100%);
+  color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.landing-hero h1 { font-size: 2.5rem; font-weight: 800; }
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  height: 100%;
+}
